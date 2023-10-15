@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfie Art Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Selfie Art Generator</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <!-- Static Image Above -->
+                <div class="static-image">
+                    <img src="static-image.png" alt="Static Image" id="static-image" height="300" width="340">
+                </div>
+                <div class="text-container">
+                    <h1>Welcome to the Selfie Art Generator</h1>
+                    <p>Create stunning artworks from your selfies using our AI and Machine Learning powered feature!</p>
+                    <div class="upload-section">
+                        <label for="image-upload-input" class="upload-label">
+                            Upload your selfie
+                            <input type="file" id="image-upload-input" accept="image/*">
+                        </label>
+                        <button id="generate-art-button" onclick="showMaintenanceModal()">Generate Art</button>
+                    </div>
+                </div>
+                <!-- Uploaded Selfie Below -->
+                <div class="image-container">
+                    <h2>Your Selfie</h2>
+                    <!-- Limit the size of the uploaded selfie to 200px by 200px -->
+                    <img src="placeholder-selfie.jpg" alt="Your Selfie" id="uploaded-image" style="max-width: 200px; max-height: 200px;">
+                </div>
+            </div>
+        </section>
+
+        <section class="generator">
+            <div class="container">
+                <div class="image-container">
+                    <h2>Generated Arts</h2>
+                     <!-- Maintenance Modal -->
+    <div id="maintenance-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal-button" onclick="closeMaintenanceModal()">&times;</span>
+            <h2>Service Under Maintenance</h2>
+            <p>Thank you for your consent in using our service. We are currently under maintenance, and once the maintenance is complete, you will be able to fully use our service.<br /> Amos, Web developer.</p>
+            <button id="return-to-home-button" onclick="closeMaintenanceModal()">Return to Home</button>
+        </div>
+    </div>
+                    <p>Click <a href="gallery.html">Here</a> to view more Generated Arts of various AI powered photos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Selfie Art Generator. A creation by <a href="www.dylaneamos.com">Amos.</a></p>
+        </div>
+    </footer>
+
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
